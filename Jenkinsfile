@@ -1,29 +1,29 @@
 pipeline {
-    try{
-    notifyBuild('STARTED')
-   stage('Preparation') {
-      git 'https://github.com/Mohammed394/Mohamed-Ali.git'
-
-      mvnHome = tool 'MAVEN_HOME'
-   }
-   stage('Build') {
-         // Run the maven build
-
-                    sh 'mvn test -Pregression'
+    agent any
 
 
-   }
-   stage('Results') {
-      junit '**/target/surefire-reports/TEST-*.xml'
-      archive 'target/*.jar'
-   }
-    } catch (e) {
-    // If there was an exception thrown, the build failed
-    currentBuild.result = "FAILED"
-    throw e
 
-  } finally {
-    // Success or failure, always send notifications
-    notifyBuild(currentBuild.result)
-  }
+    stages {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/Mohammed394/Mohamed-Ali.git'
+
+                // Run Maven on a Unix agent.
+                sh "mvn test -Pregression"
+
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+
+            post {
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and archive the jar file.
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
+            }
+        }
+    }
 }
