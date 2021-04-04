@@ -8,12 +8,10 @@ pipeline {
    }
    stage('Build') {
          // Run the maven build
-              withEnv(["MVN_HOME=$mvnHome"]) {
-                 if (isUnix()) {
-                    sh '"$MVN_HOME/bin/mvn" test -Pregression'
-                 } else {
-                    bat(/"%MVN_HOME%\bin\mvn" test -Pregression/)
-                 }
+
+                    sh 'mvn test -Pregression'
+
+              
               }
 
    }
