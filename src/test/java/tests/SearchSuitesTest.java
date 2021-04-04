@@ -20,12 +20,12 @@ public class SearchSuitesTest extends TestBase {
 
     @BeforeMethod(alwaysRun=true)
     public void setup() throws IOException {
-        driver.quit();
+
         searchPage = new SearchPage(driver);
         searchResultPage = new SearchResultPage(driver);
         mapSearchPage = new MapSearchPage(driver);
         testData = new TestData();
-        StartDriver("chrome");
+       // StartDriver("chrome");
 
     }
     @Test

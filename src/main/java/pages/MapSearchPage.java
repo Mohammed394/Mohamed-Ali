@@ -19,7 +19,7 @@ public class MapSearchPage extends PageBase {
         clickOnElement(driver,mapsBtn);
         selectElementInList(driver,mapResult,0);
         waitForElement(driver,mapTxtSearch);
-        Thread.sleep(4000);
+        Thread.sleep(6000);
         String driverUrl = driver.getCurrentUrl();
         Assert.assertTrue(driverUrl.contains(lat));
         Assert.assertTrue(driverUrl.contains(lon));
