@@ -11,8 +11,6 @@ pipeline {
 
                     sh 'mvn test -Pregression'
 
-              
-              }
 
    }
    stage('Results') {
