@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="smokeTest" verbose="9" preserve-order="true">
+    <test name="smokeTest">
+        <groups>
+            <run>
+                <include name="smokeTest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.SearchSuites"/>
+        </classes>
+
+    </test>
+</suite>

@@ -29,8 +29,8 @@ public class Login_Page extends PageBase {
 	WebElement result;
 
 	public void loginUser(String emailTxt , String passwordTxt ) {
-		SetTextElement(email, emailTxt);
-		SetTextElement(password, passwordTxt);
+		//SetTextElement(email, emailTxt);
+		//SetTextElement(password, passwordTxt);
 	}
 	
 	public void checkRememberMe() {
@@ -40,13 +40,13 @@ public class Login_Page extends PageBase {
 
 	public void PressLoginButton() {
 		
-		clickButton(LoginButton);
+		//clickButton(LoginButton);
 	
 	}
 
 	public void ReturnResult(String resultTxt)
 	{
 		
-		AssertElement(result, resultTxt);
+		//AssertElement(result, resultTxt);
 	}
 }

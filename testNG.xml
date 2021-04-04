@@ -1,9 +1,0 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite  name="NopCommerce Regression Suite">
-<parameter name="browser" value="firfox"></parameter>	
-  <test name="Registration Test">
-    <classes>
-      <class name="tests.UserRegistration_Test"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->

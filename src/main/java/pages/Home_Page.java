@@ -21,18 +21,18 @@ public class Home_Page extends PageBase {
 	
 	public void OpenRegistrationPage() {
 	
-		clickButton(RegisterLink);
+		//clickButton(RegisterLink);
 		
 	}
 	
 	public void OpenLoginPage() {
 		
-		clickButton(LoginLink);
+		//clickButton(LoginLink);
 		
 	}
 	
 	public void UserLogout() {
-		clickButton(LogoutLink);
+		//clickButton(LogoutLink);
 	}
 	
 }
