@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.Description;
 import kotlin.jvm.Throws;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.MapSearchPage;

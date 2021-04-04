@@ -15,8 +15,10 @@ import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CommandExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.PageBase;
+import utilites.Helper;
 
 
 public class TestBase {
@@ -61,7 +63,13 @@ public class TestBase {
     }
 
     @AfterMethod(alwaysRun = true)
-    public void quit() throws IOException {
+    public void quit(ITestResult result) throws IOException {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            System.out.println("Failed!");
+            System.out.println("Taking Screenshot....");
+            Helper.captureScreenshot(driver, result.getName());
+        }
+
         driver.quit();
     }
 
