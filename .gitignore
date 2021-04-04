@@ -19,7 +19,7 @@
 .idea/libraries/Maven__org_jooq_joor_java_8_0_9_13.xml
 .idea/libraries/Maven__uk_co_mwtestconsultancy_selenium_to_restassured_0_3.xml
 
-
+ScreenShots/*
 allure-results/*
 .idea/misc.xml
-*.iml
+

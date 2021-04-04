@@ -1,1 +1,0 @@
- docker run --rm -ti --name zalenium -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v /c/Users/moha2/temp/videos:/Users/moha2/temp/videos --privileged dosel/zalenium start  --maxDockerSeleniumContainers 40 --screenWidth 1920 --screenHeight 1080 --videoRecordingEnabled true  --desiredContainers 3

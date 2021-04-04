@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="taf" />
+        <module name="instabug" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="taf" target="1.7" />
+      <module name="instabug" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

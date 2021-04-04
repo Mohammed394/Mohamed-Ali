@@ -1,9 +1,0 @@
-//for hub
-java  -jar selenium-server-standalone-3.141.59.jar -role hub -port 8090
-
-
-//for Nodes
-
-FireFox
-java -jar -Dwebdriver.gecko.driver="C:\Users\moha2\Desktop\SelenuimCopy\taf\Drivers\geckodriver.exe" selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:8090/grid/register -browser browserName=firefox,maxInstances=10 -port 5556
-java -jar -Dwebdriver.chrome.driver="C:\Users\moha2\Desktop\original\taf\drivers\chromedriver.exe" selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:8090/grid/register -browser browserName=chrome,maxInstances=10 -port 5557
