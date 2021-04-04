@@ -11,7 +11,7 @@ import properties.TestData;
 
 import java.io.IOException;
 
-public class SearchSuites extends TestBase {
+public class SearchSuitesTest extends TestBase {
     SearchPage searchPage;
     SearchResultPage  searchResultPage;
     MapSearchPage mapSearchPage;

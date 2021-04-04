@@ -128,8 +128,6 @@
 		</activation>
 		<properties>
 			<testNGSuite>regressionTest.xml</testNGSuite>
-			<testNGSuite>smokeTest.xml</testNGSuite>
-
 		</properties>
 	</profile>
 </profiles>
