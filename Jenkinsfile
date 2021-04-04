@@ -2,7 +2,7 @@ node {
    def mvnHome
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
-      git 'https://gitlab.com/moha394/appium_framework.git'
+      git 'https://github.com/Mohammed394/Mohamed-Ali.git'
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.
