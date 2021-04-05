@@ -18,18 +18,12 @@ public class SearchPage extends PageBase {
         super(driver);
     }
 
+    //Locators
     By searchTxt = By.xpath("//input[@class='gLFyf gsfi']");
-    By instabugPageElement = By.xpath("//a[@routerlink='/careers']");
-    //By searchResult = By.xpath("//div[@tagname='span']");
     //ToDO
     By searchResult = By.tagName("span");
-    By speakTxt  = By.xpath("//span[@class='spcht']");
-
     By voiceBtn  = By.xpath("//div[@aria-label='Search by voice']");
     By searchSuggestionFrame  = By.xpath("//div[@class='A8SBwf emcav']");
-
-    By searchBtn = By.xpath("//div[@class='iblpc']");
-
     By clearBtn = By.xpath("//span[@aria-label='Clear']");
     By iAMFeelingLuckyBtn = By.xpath("//input[@class='RNmpXc']");
 
