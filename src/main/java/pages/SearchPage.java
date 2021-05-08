@@ -18,17 +18,12 @@ public class SearchPage extends PageBase {
         super(driver);
     }
 
-    //Locators
     By searchTxt = By.xpath("//input[@class='gLFyf gsfi']");
-    //ToDO
     By searchResult = By.tagName("span");
     By voiceBtn  = By.xpath("//div[@aria-label='Search by voice']");
     By searchSuggestionFrame  = By.xpath("//div[@class='A8SBwf emcav']");
     By clearBtn = By.xpath("//span[@aria-label='Clear']");
     By iAMFeelingLuckyBtn = By.xpath("//input[@class='RNmpXc']");
-
-
-
 
     public void clickOnAndSetSearchView(WebDriver driver, String keyword) throws IOException {
         if (waitForElement(driver, searchTxt)) {

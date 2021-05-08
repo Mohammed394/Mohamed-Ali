@@ -14,21 +14,20 @@ import java.io.IOException;
 
 public class SearchSuitesTest extends TestBase {
     SearchPage searchPage;
-    SearchResultPage  searchResultPage;
+    SearchResultPage searchResultPage;
     MapSearchPage mapSearchPage;
     TestData testData;
 
 
-    @BeforeMethod(alwaysRun=true)
-    public void setup() throws IOException {
+    @BeforeMethod(alwaysRun = true)
+    public void setup() {
 
         searchPage = new SearchPage(driver);
         searchResultPage = new SearchResultPage(driver);
         mapSearchPage = new MapSearchPage(driver);
         testData = new TestData();
-       // StartDriver("chrome");
-
     }
+
     @Test
     @Description("Search Suggestions")
     public void checkOnSearchSuggestion() throws IOException {
@@ -43,7 +42,7 @@ public class SearchSuitesTest extends TestBase {
         searchPage.assertOnAutoComplete(driver, testData.keyword);
     }
 
-    @Test(groups = {"regressionTest","smokeTest"})
+    @Test(groups = {"regressionTest", "smokeTest"})
     @Description("Check Search results and redirection")
     public void checkOnSearchResultAndRedirection() throws InterruptedException, IOException {
         searchPage.clickOnAndSetSearchView(driver, testData.keyword);
@@ -62,7 +61,7 @@ public class SearchSuitesTest extends TestBase {
 
     @Test(groups = "smokeTest")
     @Description("Check type multiple keywords")
-    public void checkRedirection() throws IOException{
+    public void checkRedirection() throws IOException {
         searchPage.clickOnAndSetSearchView(driver, testData.MultipleKeyword);
         searchPage.clickOnSearchBtn(driver);
         searchPage.assertOnDriverTitle(driver, testData.MultipleKeyword);
@@ -72,7 +71,7 @@ public class SearchSuitesTest extends TestBase {
 
     @Test
     @Description("Check clearing Txt and type again")
-    public void clearTextAndSearchAgain()throws IOException {
+    public void clearTextAndSearchAgain() throws IOException {
         searchPage.clickOnAndSetSearchView(driver, testData.keyword);
         searchPage.clearTxt(driver);
         searchPage.clickOnAndSetSearchView(driver, testData.MultipleKeyword);
