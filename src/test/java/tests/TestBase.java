@@ -3,27 +3,19 @@ package tests;
 import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
-import com.sun.jndi.toolkit.url.Uri;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.BrowserType;
-import org.openqa.selenium.remote.CommandExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import pages.PageBase;
 import utilites.Helper;
 
-
 public class TestBase {
-
     //For Initialize the Driver
     enum configuration {
         chrome,

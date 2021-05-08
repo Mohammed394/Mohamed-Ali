@@ -1,25 +1,16 @@
 package pages;
-
-
-import jdk.nashorn.internal.runtime.logging.DebugLogger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.IOException;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class PageBase {
-
-
     protected WebDriver driver;
-
     public PageBase(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-
     protected static void clickOnElement(WebDriver driver, By element) throws IOException {
         driver.findElement(element).click();
         System.out.println(element + " is clicked");
