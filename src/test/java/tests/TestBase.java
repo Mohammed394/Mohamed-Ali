@@ -34,7 +34,6 @@ public class TestBase {
             options.addArguments("--use-fake-ui-for-media-stream");
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
-
         }
         if (config == configuration.firefox) {
             System.setProperty("webdriver.gecko.driver", "Drivers/geckodriver");
@@ -42,13 +41,14 @@ public class TestBase {
             options.addArguments("--use-fake-ui-for-media-stream");
             driver = new FirefoxDriver(options);
             driver.manage().window().maximize();
-
-        }else if (config == configuration.chromeDocker) {
+        }
+        else if (config == configuration.chromeDocker) {
             Runtime.getRuntime().exec("docker-compose up");
             DesiredCapabilities cap = new DesiredCapabilities();
             cap.setBrowserName(BrowserType.CHROME);
             driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-        } else if (config == configuration.firefoxDocker) {
+        }
+        else if (config == configuration.firefoxDocker) {
             Runtime.getRuntime().exec("docker-compose up");
             DesiredCapabilities cap = new DesiredCapabilities();
             cap.setBrowserName(BrowserType.FIREFOX);
@@ -65,7 +65,7 @@ public class TestBase {
     }
 
     @AfterMethod(alwaysRun = true)
-    public void quit(ITestResult result) throws IOException {
+    public void quit(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE) {
             System.out.println("Failed!");
             System.out.println("Taking Screenshot....");
